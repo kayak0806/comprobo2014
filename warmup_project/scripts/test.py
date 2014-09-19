@@ -1,18 +1,2 @@
-def getch():
-    """ Return the next character typed on the keyboard """
-    import sys, tty, termios
-    fd = sys.stdin.fileno()
-    old_settings = termios.tcgetattr(fd)
-    try:
-        tty.setraw(sys.stdin.fileno())
-        ch = sys.stdin.read(1)
-    finally:
-        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-    return ch
-
-
-ch = getch()
-
-print ch
-
-
+merp, meep = 0,0
+print merp, meep
